@@ -1,6 +1,4 @@
-# Projekt Modele Regresji- polecenia
-
-Analiza Regresji / *Regression Analysis*
+# Projekt Modele Regresji
 
 Ten projekt zawiera implementację szeregu zadań z zakresu modelowania regresyjnego, opracowanych na podstawie programów akademickich. Głównym celem jest praktyczne zastosowanie diagnostyki modeli oraz metod selekcji zmiennych.
 
