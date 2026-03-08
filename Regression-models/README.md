@@ -1,27 +1,37 @@
 # Projekt Modele Regresji- polecenia
-1. Rozważamy zależność zmiennej objaśnianej Y od zmiennej objaśniającej X. Wykonać następujące polecenia:
 
-  a) narysować wykres punktowy zależności Y od X.
+Analiza Regresji / *Regression Analysis*
 
-  b) zbudować model regresji wielomianowej dla zmiennych X i Y. Na podstawie wykresu punktowego wybrać stopień regresji wielomianowej. Rozważyć regresję wielomianową stopnia co najwyżej piątego.
+Ten projekt zawiera implementację szeregu zadań z zakresu modelowania regresyjnego, opracowanych na podstawie programów akademickich. Głównym celem jest praktyczne zastosowanie diagnostyki modeli oraz metod selekcji zmiennych.
 
-  c) wykonać diagnostykę modelu z podpunktu b). Przeprowadzić testy poznane na zajęciach i przeanalizować wykresy diagnostyczne.
+*This project contains implementations of various regression modeling tasks, developed based on university assignments. The primary goal is the practical application of model diagnostics and variable selection methods.*
 
-  d) zbudować model regresji liniowej dla zmiennej objaśnianej Y i zmiennych objaśniających |X-a1|, |X-a2|, …, |X-an|. Stałe a1, a2, …, an wybrać samemu np. na podstawie wykresu punktowego. Stałych może być co najwyżej pięć.
+Zakres Projektu / *Project Scope* 
 
-  e) wykonać diagnostykę modelu z podpunktu d). Przeprowadzić testy poznane na zajęciach i przeanalizować wykresy diagnostyczne.
+1. Regresja Jednowymiarowa (Y vs X) / *Univariate Regression*
+  
+  a) Wizualizacja: Analiza wykresów punktowych.
+  
+  b) Regresja Wielomianowa: Budowa modeli do stopnia $n \le 5$ i dobór optymalnego stopnia wielomianu.
 
-  f) podzielić zbiór danych na zbiór uczący (70% danych) i testowy (30% danych). Na podstawie zbioru uczącego zbudować modele z podpunktów b) i d), porównać je wyliczając sumę kwadratów błędów dla zbiorów treningowych.
+  c) Diagnostyka: testy statystyczne i wykresy diagnostyczne.
+  
+  d) Regresja Liniowa z Transformacją: Modelowanie oparte na wartościach bezwzględnych $|X - a_n|$ z manualnym doborem punktów węzłowych.
 
+  e) Diagnostyka: testy statystyczne i wykresy diagnostyczne.
+  
+  f) Walidacja: Podział danych na zbiór uczący (70%) i testowy (30%) oraz porównanie modeli za pomocą sumy kwadratów błędów (SSE).
+  
+  
+2. Regresja Wielokrotna (Y vs X1...X6) / Multiple Regression
 
-2. Rozważamy zależność zmiennej objaśnianej Y od zmiennych objaśniających X1, X2, …, X6. Wykonać następujące polecenia:
+  a) Modelowanie: Budowa pełnego modelu regresji liniowej dla wielu zmiennych objaśniających.
 
-  a) zbudować model regresji liniowej dla zmiennych X1, X2, …, X6 i Y.
+  b) Diagnostyka: testy statystyczne i wykresy diagnostyczne.
+  
+  c) Analiza Współliniowości: Badanie zależności liniowych między zmiennymi objaśniającymi.
+  
+  d) Selekcja Zmiennych: Optymalizacja modelu metodą eliminacji wstecznej (backward elimination) oraz dołączania krokowe (forward selection) do maksymalnie dwóch zmiennych.
+  
+  e) Walidacja: Podział danych na zbiór uczący (70%) i testowy (30%) oraz porównanie modeli za pomocą sumy kwadratów błędów (SSE).
 
-  b) wykonać diagnostykę modelu. Przeprowadzić testy poznane na zajęciach i przeanalizować wykresy diagnostyczne.
-
-  c) zbadać liniową zależność zmiennych X1, X2, …, X6.
-
-  d) wybrać model z co najwyżej dwiema zmiennymi objaśniającymi metodą eliminacji i dołączania.
-
-  e) podzielić zbiór danych na zbiór uczący (70% danych) i testowy (30% danych). Na podstawie zbioru uczącego zbudować modele z podpunktów a) i d), porównać je wyliczając sumę kwadratów błędów dla zbiorów testowych.
