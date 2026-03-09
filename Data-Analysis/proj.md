@@ -10,7 +10,7 @@ output:
     code_download: true
     highlight: tango
 ---
-# Zadania {.tabset}
+# Zadania
 
 ## Podpunkt a)
 Polecenie: Zbudować model klasyfikacji metodą LDA dla dwóch pierwszych zmiennych kanonicznych. Zrobić odpowiedni wykres z obszarami klasyfikacji (obszary wyznaczone za pomocą odpowiednich prostych).
@@ -587,3 +587,4 @@ Walidacja n-krotna potwierdziła, a nawet poprawiła wynik uzyskany w walidacji 
 *Podczas walidacji n-krotnej pojawiły się ostrzeżenia o braku zbieżności algorytmu (did not converge) dla pojedynczych powtórzeń. Oznacza to, że dla kilku specyficznych punktów (będących prawdopodobnie wartościami odstającymi) sieć miała problem ze znalezieniem globalnego minimum w zadanym limicie kroków.*
 
 Ostateczny wniosek: **Sieć Neuronowa (MLP) o strukturze (3,2) jest najlepsza.** Wyniki sugerują, że liniowa granica decyzyjna jest niewystarczająca dla klas 2 i 3.
+
