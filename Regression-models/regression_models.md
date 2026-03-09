@@ -12,14 +12,13 @@ output:
     df_print: paged
 ---
 
-## Zadania na ocenę 4 i 5 {.tabset}
+## Zadania na ocenę 4 i 5 
 
 ### Zadanie 1.
 
 Rozważamy zależność zmiennej objaśnianej **Y** od zmiennej objaśniającej **X**.
 
 #### a) Wykres punktowy zależności Y od X
-
 
 ``` r
 dane = read.csv("dane2.csv", sep = ";", dec = ",", header = TRUE)
@@ -31,7 +30,7 @@ wykres = ggplot(dane ,aes(x=x,y=y))+
 wykres
 ```
 
-![](regression_models_files/figure-html/wykres-1.png)<!-- -->
+<img width="672" height="480" alt="download" src="https://github.com/user-attachments/assets/8fa46c87-5d9b-47de-bb29-b20b959a3753" />
 
 
 #### b) Regresja wielomianowa (stopnie 1–5)
@@ -64,8 +63,8 @@ for (i in 1:5) {
 ``` r
 legend("topright", legend = paste("Stopień", 1:5), col = colors, lwd = 2)
 ```
+<img width="672" height="480" alt="download" src="https://github.com/user-attachments/assets/0b709df9-7af8-4ed3-bdc7-54ae4d44ab26" />
 
-![](regression_models_files/figure-html/regresja-1.png)<!-- -->
 
 ##### Wnioski:
 Stopień 1: R^2 = 0.15, widoczne niedopasowanie.
@@ -87,8 +86,7 @@ model1 = lm(y ~ poly(x, 4, raw = TRUE), data = dane)
 par(mfrow = c(2, 2))
 plot(model1)
 ```
-
-![](regression_models_files/figure-html/wykresy_diagnostyczne-1.png)<!-- -->
+<img width="672" height="480" alt="download" src="https://github.com/user-attachments/assets/b99ba3c1-ae07-47a2-8b4c-3ac04acc3586" />
 
 #### Podsumowanie:
 
@@ -183,8 +181,8 @@ Model wielomianowy stopnia 4 dobrze odwzorowuje strukturę danych, reszty są zg
 ## Multiple R-squared:  0.9526,	Adjusted R-squared:  0.9511 
 ## F-statistic: 642.5 on 3 and 96 DF,  p-value: < 2.2e-16
 ```
+<img width="672" height="480" alt="download" src="https://github.com/user-attachments/assets/88f06cee-37a3-41d2-8287-a2391f0721cf" />
 
-![](regression_models_files/figure-html/stale-1.png)<!-- -->
 
 #### Podsumowanie:
 Współczynnik determinacji $R^2$ wynosi 0.9526 - model wyjaśnia ponad 95% zmienności zmiennej Y. Jest to wynik niemal identyczny z modelem wielomianowym 4. stopnia, ale nasz nowy model jest znacznie prostszy i ma mniejszą skłonność do przeuczenia.
@@ -259,11 +257,8 @@ Model regresji liniowej ze zmiennymi postaci |X–ai| dobrze opisuje zależnoś�
 
 #### f) Porównanie modeli na zbiorze uczącym i testowym
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Model"],"name":[1],"type":["chr"],"align":["left"]},{"label":["SSE_train"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["SSE_test"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Stopień 4","2":"0.3267745","3":"0.09362924"},{"1":"|X-ai|","2":"0.2929898","3":"0.13345376"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<img width="916" height="154" alt="{FEFF46E0-0F18-4DCA-852A-3676813951E7}" src="https://github.com/user-attachments/assets/cac38fd9-5591-46b7-91f2-fe384abbe724" />
+
 
 ##### Wnioski:
 SSE_train – błąd na zbiorze uczącym
@@ -323,8 +318,8 @@ summary(model1)
 par(mfrow = c(2, 2))
 plot(model1)
 ```
+<img width="672" height="480" alt="download" src="https://github.com/user-attachments/assets/c90c6847-62f7-48b4-84a6-cc7bc57ac3f7" />
 
-![](regression_models_files/figure-html/diagnostyka2-1.png)<!-- -->
 
 ``` r
 shapiro.test(resid(model1))
@@ -597,14 +592,12 @@ wyniki = data.frame(
 wyniki
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Model"],"name":[1],"type":["chr"],"align":["left"]},{"label":["SSE_train"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["SSE_test"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Pełny (X1–X6)","2":"4.284970e-04","3":"2.033991e-04"},{"1":"Uproszczony (X4, X5)","2":"3.686415e+02","3":"1.578575e+02"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<img width="922" height="155" alt="{146B6136-7FF1-4B16-A57A-2983706D9EA0}" src="https://github.com/user-attachments/assets/95aa6fa1-078d-471b-9177-3db67d17b4cf" />
+
 ##### Wnioski:
 Model pełny lepiej dopasowuje dane uczące (niższe SSE_train).
 
 Model uproszczony (X4, X5) ma bardzo podobny błąd na zbiorze testowym, a różnice w SSE_test są niewielkie. 
 
 ##### Model uproszczony (X4, X5) jest wystarczający i bardziej stabilny.
+
