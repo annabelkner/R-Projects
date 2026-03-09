@@ -71,9 +71,10 @@ boxplot(B ~ Class, data = dane, col = "lightgreen", main = "Zmienna B")
 boxplot(C ~ Class, data = dane, col = "salmon", main = "Zmienna C")
 ```
 
-![](proj_files/figure-html/boxplot-1.png)<!-- -->
+<img width="672" height="480" alt="pobrane" src="https://github.com/user-attachments/assets/a3993718-df5b-4f77-b620-0b12222dcca7" />
 
 *Wykresy kropkowe dla danych*
+
 
 
 ``` r
@@ -86,7 +87,8 @@ ggplot(df_long, aes(x = Class, y = Wartosc)) +
   facet_wrap(~Zmienna, scales = "free_y")
 ```
 
-![](proj_files/figure-html/kropkowy-1.png)<!-- -->
+<img width="672" height="480" alt="download" src="https://github.com/user-attachments/assets/aa2de07b-a50f-48a9-84c0-6cda4c5882e8" />
+
 
 * Zmienna C świetnie radzi sobie z odróżnianiem klasy 1. Średnia i zakres wartości dla tej klasy są wyraźnie wyższe i niemal całkowicie odseparowane od klas 2 i 3. Zmienne A i B też dobrze radzą sobie z odróżnieniem klasy 1 od pozostałych (Klasa 1 ma wyraźnie niższe wartości średnie), ale klasy 2 i 3 się nakładają.
 
@@ -111,7 +113,7 @@ library(klaR)
 partimat(Class ~ LD1 + LD2, data = dane_lda, method = "lda", imageplot = T)
 ```
 
-![](proj_files/figure-html/LDA-1.png)<!-- -->
+<img width="672" height="480" alt="download" src="https://github.com/user-attachments/assets/92edc960-489a-4398-b5ec-f6d7d058a3ca" />
 
 ### Wnioski z wykresu
 
@@ -587,4 +589,5 @@ Walidacja n-krotna potwierdziła, a nawet poprawiła wynik uzyskany w walidacji 
 *Podczas walidacji n-krotnej pojawiły się ostrzeżenia o braku zbieżności algorytmu (did not converge) dla pojedynczych powtórzeń. Oznacza to, że dla kilku specyficznych punktów (będących prawdopodobnie wartościami odstającymi) sieć miała problem ze znalezieniem globalnego minimum w zadanym limicie kroków.*
 
 Ostateczny wniosek: **Sieć Neuronowa (MLP) o strukturze (3,2) jest najlepsza.** Wyniki sugerują, że liniowa granica decyzyjna jest niewystarczająca dla klas 2 i 3.
+
 
